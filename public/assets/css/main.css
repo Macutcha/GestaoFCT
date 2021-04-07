@@ -1,0 +1,34 @@
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: 100%; 
+}
+
+header {
+    height: auto;
+}
+
+main.Main {
+    position: relative;
+    flex: auto 1  0;
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+
+main.Main section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fafafa;
+    width: auto;
+}
