@@ -1,0 +1,20 @@
+{
+    "name": "macutcha/cod",
+    "description": "mansj",
+    "type": "project",
+    "authors": [
+        {
+            "name": "manuel",
+            "email": "manuel@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/"
+        },
+        "files": [
+            "config.php"
+        ]
+    }
+}
