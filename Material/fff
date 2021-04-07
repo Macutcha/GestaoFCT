@@ -1,0 +1,6 @@
+<option value="<?= $marca_material->marca_material ?>"> <?= $tipo_material->marca_material ?> </option>
+
+
+ <?php foreach ($tipo_materiais as $tipo_material) : ?>
+                
+            <?php endforeach; ?>
