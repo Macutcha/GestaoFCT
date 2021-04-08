@@ -61,6 +61,7 @@ class Material
             ":id"               =>          $id
         ];
 
+        // Verifica se os valor da quantidade de DB e maior que 0 e se a Subtraccao nao e inferior a 0
         if ($quantRequisitada <= 0) {
             $_SESSION["equip_pouco"] = "A Quantidade de Equipamento e Inferior";
         } else if (($quantRequisitada - $Quant_Equipamento) < 0) {
