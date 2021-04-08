@@ -17,7 +17,6 @@ $causas = Causa::listar_causa();
                 <th>Material</th>
                 <th>Referenci</th>
                 <th>quantidade</th>
-                <th>Selecionar Equipamento</th>
             </tr>
             <?php foreach ($materias as $material) : ?>
                 <tr>
@@ -25,7 +24,6 @@ $causas = Causa::listar_causa();
                     <td> <?= $material->tipo_material ?> </td>
                     <td> <?= $material->referencia_material ?> </td>
                     <td> <?= $material->quantidade ?> </td>
-                    <td> <input type="checkbox" name="" id=""></td>
                 </tr>
             <?php endforeach; ?>
 

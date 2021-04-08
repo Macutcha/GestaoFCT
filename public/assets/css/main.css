@@ -31,4 +31,5 @@ main.Main section {
     transform: translate(-50%, -50%);
     background: #fafafa;
     width: auto;
+    text-align: center;
 }
