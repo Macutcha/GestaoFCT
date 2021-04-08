@@ -47,24 +47,29 @@ class Material
     }
 
     // ============================================================
-    public static function validar_requisicao($quant, $id)
+    public static function validar_requisicao($id, $Quant_Equipamento)
     {
+        $id = $id;
+        $db = new Database;
+        $resultados = $db->select("SELECT * FROM material WHERE id_material=$id");
+        foreach ($resultados as $resultado) {
+            $quantRequisitada = $resultado->quantidade;
+        }
 
-        // $db = new Database;
-        // $quant_BD = $db->select("SELECT * FROM material WHERE id_material = $id");
-        // $resultado = ($quant_BD[0]-> quantidade)- $quant;
-        // // // echo($resultado);
-        // // // var_dump($quant_BD) ;
+        $parametros = [
+            ":quantidade"       =>        $quantRequisitada,
+            ":id"               =>          $id
+        ];
 
-        // $parametros = [
-        //     ":quantidade"       =>        $resultado ,
-        //     ":id"               =>          $id
-        // ];
+        if ($quantRequisitada <= 0) {
+            $_SESSION["equip_pouco"] = "A Quantidade de Equipamento e Inferior";
+        } else if (($quantRequisitada - $Quant_Equipamento) < 0) {
+            $_SESSION["equip_pouco"] = "A Quantidade de Equipamento e Inferior";
+        } else {
+            $db->update("UPDATE material SET quantidade = :quantidade -$Quant_Equipamento
+        WHERE id_material = :id", $parametros);
+        }
 
-        // echo $parametros[":quantidade"];
-        // // $db = new Database;
-        // $db->update("UPDATE material SET quantidade = :quantidade
-        // WHERE id_material = :id", $parametros);
-
+        
     }
 }

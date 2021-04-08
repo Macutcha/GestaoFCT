@@ -11,6 +11,13 @@ $causas = Causa::listar_causa();
 
 <main class="Main">
     <section>
+
+        <?php if (isset($_SESSION["equip_pouco"])) : ?>
+            <div>
+                <?= $_SESSION["equip_pouco"]; ?>
+                <?php unset($_SESSION["equip_pouco"]); ?>
+            </div>
+        <?php endif; ?>
         <table>
             <tr>
                 <th>id</th>
@@ -26,8 +33,6 @@ $causas = Causa::listar_causa();
                     <td> <?= $material->quantidade ?> </td>
                 </tr>
             <?php endforeach; ?>
-
-
         </table>
         <form action="?a=sub_requisicao" method="post">
 
@@ -41,7 +46,9 @@ $causas = Causa::listar_causa();
                 <tr>
                     <td>
                         <select name="Equipamento" id="">
-                            <option value="<?= $material->id_material ?>"><?= $material->tipo_material ?></option>
+                            <?php foreach ($materias as $material) : ?>
+                                <option value="<?= $material->id_material ?>"><?= $material->tipo_material ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </td>
                     <td>
@@ -59,9 +66,6 @@ $causas = Causa::listar_causa();
                     </td>
                 </tr>
             </table>
-            <!--  -->
-
-            <label for="id_causa">Motivo</label>
 
             <button>Requisitar</button>
         </form>

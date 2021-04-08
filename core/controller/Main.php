@@ -109,15 +109,22 @@ class Main
             'layouts/footer',
             'layouts/html_footer'
         ]);
-        $a = Material::validar_requisicao(2,1);
+        
     }
 
+    // ============================================================
     public static function sub_requisicao()
     {
+
         $id_equipamento = $_POST["Equipamento"];
         $Quant_Equipamento = $_POST["Quant_Equipamento"];
-        Material::validar_requisicao($Quant_Equipamento, $id_equipamento);
-        Gestao::redicionamento("requisitar_equipamento");
-        return;
+
+        // Verifica se o Foi feito POST
+        if($_SERVER["REQUEST_METHOD"] == 'POST') {
+            Material::validar_requisicao($id_equipamento, $Quant_Equipamento);
+            Gestao::redicionamento("requisitar_equipamento");
+            return;
+        }
+    
     }
 }
