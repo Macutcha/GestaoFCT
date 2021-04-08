@@ -71,7 +71,7 @@ class Main
 
     // ============================================================
     // Funcaoq que faz a validacao do formulara de add equipamento
-    public function validar_equipamento()
+    public function validar_add_equipamento()
     {
         // Verifica se foi feito um POST
         if ($_SERVER["REQUEST_METHOD"] != 'POST') {

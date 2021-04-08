@@ -7,7 +7,7 @@ $routes = [
     "adicionar_funcionario"             =>                  "main@adicionar_funcionario",
 
     "criar_equipamento"                    =>                  "main@criar_equipamento",
-    "validar_equipamento"                      =>                  "main@validar_equipamento",
+    "validar_add_equipamento"              =>                  "main@validar_add_equipamento",
     "requisitar_equipamento"               =>                  "main@requisitar_equipamento",
     "sub_requisicao"                        =>                  "main@sub_requisicao",
 ];

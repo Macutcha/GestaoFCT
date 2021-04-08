@@ -9,7 +9,7 @@ class Causa
     public static function listar_causa()
     {
         $db = new Database;
-        $resultado = $db -> select("SELECT * FROM causa");
+        $resultado = $db -> select("SELECT * FROM avaria");
         return $resultado;
     }
 }

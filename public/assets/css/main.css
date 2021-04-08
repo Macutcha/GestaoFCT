@@ -31,5 +31,29 @@ main.Main section {
     transform: translate(-50%, -50%);
     background: #fafafa;
     width: auto;
+    /* text-align: center; */
+}
+
+main section#AdicionarEquipamento header {
     text-align: center;
+}
+main.Main section#AdicionarEquipamento label {
+    display: block;
+    text-align: left;
+}
+
+/* =================================================== */
+main section#requisitar_equipamento table {
+    width: 700px;
+    border: solid 1px #000;
+}
+main section#requisitar_equipamento table th {
+    /* border: solid 1px #000; */
+    background: #cacaca;
+    width: 350px;
+}
+
+main section#requisitar_equipamento table td {
+    /* border: solid 1px #000; */
+    width: 350px;
 }

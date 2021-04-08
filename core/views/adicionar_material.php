@@ -2,13 +2,15 @@
 
 use core\models\Material;
 
-$marca_materiais = Material::listar_tipo_material();
+$equipamentos = Material::listar_equipamento();
 ?>
 <main class="Main">
-    <section>
-
+    <section id="AdicionarEquipamento">
+        <header>
         <h1>Adicionar Material</h1>
-        <form action="?a=validar_equipamento" method="post">
+        </header>
+        
+        <form action="?a=validar_add_equipamento" method="post">
             <div>
                 <?php if (isset($_SESSION['erro'])) : ?>
                     <?= $_SESSION['erro'] ?>
@@ -16,21 +18,24 @@ $marca_materiais = Material::listar_tipo_material();
                 <?php endif; ?>
 
             </div>
-            <label for="">Tipo de Material</label>
+            <label for="">Equipamento</label>
             <input type="text" name="Tipo_Material">
 
-            <!--  -->
+            <!-- Marca do Equipamento -->
             <label for="">Marca</label>
             <select name="Marca" id="" name="Marca">
-                <option value="fff">gghggg</option>
+                <?php foreach($equipamentos as $equipamento):?>
+                <option value="fff"><?=$equipamento->marca?></option>
+                <?php endforeach;?>
             </select>
 
-            <!--  -->
+            <!-- Referencia do Equipamento -->
             <label for="">Referencia</label>
             <input type="text" name="Referencia">
 
             <!--  -->
-            <button>Add Material</button>
+            <label for=""></label>
+            <button>Add Equipamento</button>
         </form>
     </section>
 
