@@ -1,4 +1,6 @@
 <?php
+define("NAME",                               "Gestao FCT");
+
 
 // Databases
 define("MYSQL_SERVER",                      "localhost");
