@@ -5,7 +5,7 @@ use core\models\Material;
 $equipamentos = Material::listar_equipamento();
 ?>
 <main class="Main">
-    <section id="AdicionarEquipamento">
+    <section class="main" id="AdicionarEquipamento">
         <header>
         <h1>Adicionar Material</h1>
         </header>
@@ -36,7 +36,12 @@ $equipamentos = Material::listar_equipamento();
             <!--  -->
             <label for=""></label>
             <button>Add Equipamento</button>
+            
+            
         </form>
+
+        
+        
     </section>
 
 </main>
