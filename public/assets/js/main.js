@@ -1,87 +1,181 @@
+// document.getElementById("sub_equipamento").hidden= true;
+
+
+function mostar_sub_equipamento() {
+    document.getElementById("sub_equipamento").style.display="block"
+}
+
+function mostar_usuario () {
+    document.getElementById("gerir_usuario").style.display="block"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById("#sub_equipamento").hidden=true
+// // alert("tam_header")
+ 
+// function mostar_sub_equipamento() {
+//     // alert("vcert");
+//    sub_equipamento.style.display="block"
+//    document.querySelector("sub_equipamento").hidden=false
+// }
+
+//  window.addEventListener("load", main)
+// function main() {
+     
+
+   
+    
+//     // document.getElementById("equipamento").addEventListener("click", mostar_sub_equipamento)
+// }
+ 
+//  var sub_equipamento = document.querySelector("sub_equipamento")
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+//  // Variaveis
+//  var fechar_menu, mostrar_menu
+//  var elementoSelecionado = document.getElementById("Selecionado")
+
+//  // Funcao que oculta Elementos
+//  // ocultar() 
+// // =====================================================
+//  // Atribuicao de valores nas variavis 
+//  fechar_menu = document.getElementById("Exit_Bars");
+//  mostrar_menu = document.getElementById("bars")
+
+// // =====================================================
+//  // Addicao do Evento e a accao
+//  fechar_menu.addEventListener("click", ocultar_menu)
+//  mostrar_menu.addEventListener("click", mostrarMenu)
+//  elementoSelecionado.addEventListener("change", mostrarElementos)
+ 
+ 
+ 
+ 
  // Carrega a funcao main depois da pagina carregar
- window.addEventListener("load", main)
+
 
 // Funcoa principal que faz o carregamento de amaioria das funcoes
-function main() {
-    // Variaveis
-    var fechar_menu, mostrar_menu
-    var elementoSelecionado = document.getElementById("Selecionado")
 
-    // Funcao que oculta Elementos
-    // ocultar() 
-// =====================================================
-    // Atribuicao de valores nas variavis 
-    fechar_menu = document.getElementById("Exit_Bars");
-    mostrar_menu = document.getElementById("bars")
 
-// =====================================================
-    // Addicao do Evento e a accao
-    fechar_menu.addEventListener("click", ocultar_menu)
-    mostrar_menu.addEventListener("click", mostrarMenu)
-    elementoSelecionado.addEventListener("change", mostrarElementos)
-}
+// // =====================================================
+// function ocultar_menu() {
+//     document.getElementById("menu").style.display="none"
+// }
 
-// =====================================================
-function ocultar_menu() {
-    document.getElementById("menu").style.display="none"
-}
+// // =====================================================
+//     function mostrarMenu() {
+//         document.getElementById("menu").style.display="block"
+//     }
 
-// =====================================================
-    function mostrarMenu() {
-        document.getElementById("menu").style.display="block"
-    }
-
-// =====================================================
-    // funcoa de teste
-    function mostrarElementos() {
-        console.log(document.getElementById("Selecionado").value)
-        var valor = document.getElementById("Selecionado").value
-        if (valor =='Central') {
-            coultar_elemento(document.getElementById("adicionar_cental"))
-        }
+// // =====================================================
+//     // funcoa de teste
+//     function mostrarElementos() {
+//         console.log(document.getElementById("Selecionado").value)
+//         var valor = document.getElementById("Selecionado").value
+//         if (valor =='Central') {
+//             coultar_elemento(document.getElementById("adicionar_cental"))
+//         }
         
-        if (valor =='PT') {
-            coultar_elemento(document.getElementById("adicionar_pt"));
-        }
+//         if (valor =='PT') {
+//             coultar_elemento(document.getElementById("adicionar_pt"));
+//         }
 
-        if (valor == "Subestacao"){
-            coultar_elemento(document.getElementById("adicionar_subestacao"));
-        }
+//         if (valor == "Subestacao"){
+//             coultar_elemento(document.getElementById("adicionar_subestacao"));
+//         }
 
-        if(valor == "Saida") {
-            coultar_elemento(document.getElementById("adicionar_saida"));
-        }
+//         if(valor == "Saida") {
+//             coultar_elemento(document.getElementById("adicionar_saida"));
+//         }
 
-        if(valor == "Linha") {
-            coultar_elemento(document.getElementById("adicionar_linha"));
-        }
+//         if(valor == "Linha") {
+//             coultar_elemento(document.getElementById("adicionar_linha"));
+//         }
 
 
-    }
+//     }
 
-// =====================================================
-// Funcoa Que oculta os elementos
-function ocultar() {
-    document.getElementById("adicionar_subestacao").hidden = true
-    document.getElementById("adicionar_cental").hidden = true
-    document.getElementById("adicionar_linha").hidden = true
-    document.getElementById("adicionar_saida").hidden = true
-}
+// // =====================================================
+// // Funcoa Que oculta os elementos
+// function ocultar() {
+//     document.getElementById("adicionar_subestacao").hidden = true
+//     document.getElementById("adicionar_cental").hidden = true
+//     document.getElementById("adicionar_linha").hidden = true
+//     document.getElementById("adicionar_saida").hidden = true
+// }
 
-// =====================================================
-// Funcao que ocultas elemntos nao Selecionados
-function coultar_elemento(visualizarElemento) {
-    document.getElementById("adicionar_subestacao").hidden = true
-    document.getElementById("adicionar_cental").hidden = true
-    document.getElementById("adicionar_linha").hidden = true
-    document.getElementById("adicionar_saida").hidden = true
-    document.getElementById("adicionar_pt").hidden = true
+// // =====================================================
+// // Funcao que ocultas elemntos nao Selecionados
+// function coultar_elemento(visualizarElemento) {
+//     document.getElementById("adicionar_subestacao").hidden = true
+//     document.getElementById("adicionar_cental").hidden = true
+//     document.getElementById("adicionar_linha").hidden = true
+//     document.getElementById("adicionar_saida").hidden = true
+//     document.getElementById("adicionar_pt").hidden = true
 
-    // Verifica se o elemento esta definido para tornar vissivel
-    if(visualizarElemento) {
-        visualizarElemento.hidden = false
-    }
-}
+//     // Verifica se o elemento esta definido para tornar vissivel
+//     if(visualizarElemento) {
+//         visualizarElemento.hidden = false
+//     }
+// }
 
 
 
