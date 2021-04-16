@@ -4,8 +4,8 @@ use core\models\Departamento;
 
 $cargos = Departamento::listar_cargo();
 ?>
-<main class="Main">
-    <section>
+<main class="Main" id="struct_main">
+    <section class="main">
 
         <h1>Adicionar Funcionario</h1>
         <form action="?a=adicionar_funcionario" method="post">
