@@ -15,6 +15,7 @@ class Material
             ":marca"                   =>               $marca,
             ":referencia"              =>               $referencia
         ];
+        
         $db = new Database;
         $db->insert(
             "
