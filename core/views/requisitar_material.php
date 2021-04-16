@@ -10,8 +10,11 @@ $avarias = Causa::listar_causa();
 ?>
 
 <main class="Main">
-    <section id="requisitar_equipamento">
-
+    
+    <section class="main" id="requisitar_equipamento">
+        <div>
+            <h1><?= NAME ?></h1>
+        </div>
         <!-- Avaisos -->
         <?php if (isset($_SESSION["equip_pouco"])) : ?>
             <div>
@@ -25,17 +28,23 @@ $avarias = Causa::listar_causa();
             <tr>
                 <th>id</th>
                 <th>Material</th>
+                <th>Marca</th>
                 <th>Referenci</th>
                 <th>quantidade</th>
+                <th>Potência</th>
             </tr>
             <?php foreach ($equipamentos as $equipamento) : ?>
                 <tr>
                     <td> <?= $equipamento->id_equipamento ?> </td>
                     <td> <?= $equipamento->equipamento ?> </td>
+                    <td> <?= $equipamento->marca ?> </td>
                     <td> <?= $equipamento->referencia ?> </td>
                     <td> <?= $equipamento->quantidade ?> </td>
+                    <td> <?= $equipamento->potencia ?> </td>
+
                 </tr>
             <?php endforeach; ?>
+
         </table>
 
         <!-- Formularios de ocoes para equisitar -->
@@ -59,6 +68,13 @@ $avarias = Causa::listar_causa();
                         </select>
                     </td>
 
+                    <td>
+                        <select name="Equipamento" id="">
+                            <?php foreach ($equipamentos as $equipamento) : ?>
+                                <option value="<?= $equipamento->id_equipamento ?>"><?= $equipamento->equipamento ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </td>
                     <!-- Marca de Equipamento -->
                     <td>
                         <select name="Marca_Equipamento" id="">
