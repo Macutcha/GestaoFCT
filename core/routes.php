@@ -10,6 +10,12 @@ $routes = [
     "validar_add_equipamento"              =>                  "main@validar_add_equipamento",
     "requisitar_equipamento"               =>                  "main@requisitar_equipamento",
     "sub_requisicao"                        =>                  "main@sub_requisicao",
+
+
+    // LOGIN
+    "login"                                =>                  "main@login",
+    "validar_login"                        =>                   "main@validar_login"     
+
 ];
 
 $action ="inicio";

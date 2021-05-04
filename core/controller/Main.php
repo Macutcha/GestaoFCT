@@ -7,6 +7,7 @@ use core\class\Gestao;
 use core\models\Funcionario;
 use core\models\Material;
 use core\models\Pts;
+use core\models\Usuario;
 
 class Main
 {
@@ -69,6 +70,41 @@ class Main
        
     }
 
+    
+    // ============================================================
+    public function login() {
+
+          Gestao::Layouts([
+            'layouts/html_header',
+            
+            'login',
+            
+            'layouts/html_footer'
+        ]);
+       
+    }
+
+    public function validar_login()
+    {
+        if ($_SERVER["REQUEST_METHOD"] !="POST") {
+            Gestao::redicionamento("login");
+        }
+
+        if (!empty($_POST["Email"]) && !empty($_POST["Senha"])) {
+            $email = $_POST["Email"];
+            $senha = $_POST["Senha"];
+
+            if (Usuario::verificar_usuario_BD($email, $senha)) {
+                
+                die("certp0");
+            } else {
+                
+                Gestao::redicionamento("login");
+            }
+
+        }
+        echo "certo";
+    }
     // ============================================================
     // Funcaoq que faz a validacao do formulara de add equipamento
     public function validar_add_equipamento()
